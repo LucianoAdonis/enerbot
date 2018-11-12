@@ -84,6 +84,8 @@ module Case
       Resp.message(data, Stock.fetch(data.text))
     when /qr/i
       Resp.message(data, QR.generate(data.text))
+    when /vuelo/i
+      Resp.message(data, ':wait_latam:')
     end
   end
 
